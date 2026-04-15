@@ -60,7 +60,6 @@ function updateCalculator() {
 
   const taxAmount = billTotal * 0.11;
   const totalWithTaxUSD = billTotal + taxAmount;
-
   const tipAmountUSD = billTotal * (tipPercent / 100);
   const totalWithTipAndTaxUSD = billTotal + taxAmount + tipAmountUSD;
 
