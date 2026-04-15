@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>International Tip Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="calculator-card">
+      <h1>Tip Calculator</h1>
 
+      <p class="intro">Currency conversion:</p>
+      <p class="conversion-line">$1 USD = €0.95 EUR for Euros</p>
+      <p class="conversion-line">$1 USD = ₹85 INR for Rupees</p>
+
+      <form id="tipForm" novalidate>
+        <div class="form-group">
+          <label for="billTotal">Bill Total ($)</label>
+          <input type="text" id="billTotal" name="billTotal" placeholder="Enter bill amount" />
+          <p id="errorMessage" class="error-message"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="totalWithTax">Total Bill with Tax (11%)</label>
+          <input type="text" id="totalWithTax" name="totalWithTax" disabled />
+        </div>
+
+        <div class="form-group">
+          <label for="currencySelect">Select Currency</label>
+          <select id="currencySelect" name="currencySelect">
+            <option value="USD">US Dollars ($)</option>
+            <option value="EUR">Euros (€)</option>
+            <option value="INR">Rupees (₹)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tipSlider">Tip</label>
+          <div class="slider-row">
+            <input type="range" id="tipSlider" name="tipSlider" min="0" max="100" value="15" />
+            <input type="text" id="tipPercentage" name="tipPercentage" disabled />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tipAmount">Converted Tip Amount</label>
+          <input type="text" id="tipAmount" name="tipAmount" disabled />
+        </div>
+
+        <div class="form-group">
+          <label for="totalWithTipAndTax">Converted Total Bill with Tip and Tax</label>
+          <input type="text" id="totalWithTipAndTax" name="totalWithTipAndTax" disabled />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html
